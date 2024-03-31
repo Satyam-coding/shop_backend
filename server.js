@@ -6,9 +6,9 @@ import cors from "cors";
 import { errorMiddleware } from "./middleware/validation.js";
 dotenv.config();
 // dotenv.config({path:'./config/config.env'});
-
+const FRONTEND_URL=process.env.FRONTEND_URL;
 const corsOptions ={
-    origin:'http://localhost:5173',
+    origin:`${FRONTEND_URL}`,
     methods:'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials:true,
 }
